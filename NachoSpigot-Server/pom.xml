@@ -25,6 +25,7 @@
         <netty.shortCommitHash>5f1802ac65</netty.shortCommitHash> <!-- TODO: automatically get short hash from long -->
         <netty.longCommitHash>5f1802ac65d63076616c5b3ee7a3d4151c7f3414</netty.longCommitHash>
         <netty.repoStatus>clean</netty.repoStatus>
+        <io-netty.netty-codec-http2.version>4.1.100.Final</io-netty.netty-codec-http2.version>
     </properties>
 
     <parent>
@@ -59,7 +60,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
+            <version>3.18.0</version>
         </dependency>
 
         <dependency>
@@ -94,14 +95,14 @@
         <dependency>
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
-            <version>3.7.2</version>
+            <version>3.41.2.2</version>
             <type>jar</type>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.14</version>
+            <version>8.0.16</version>
             <type>jar</type>
             <scope>runtime</scope>
         </dependency>
@@ -356,4 +357,13 @@
             </plugin>
         </plugins>
     </build>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-codec-http2</artifactId>
+                <version>${io-netty.netty-codec-http2.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
